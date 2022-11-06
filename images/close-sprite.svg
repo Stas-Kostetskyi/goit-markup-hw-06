@@ -5,4 +5,4 @@ style="position:absolute;width:0;height:0;overflow:hidden"><defs>
  style="fill:var(--color1, #fff)"/>
  <path fill="none" stroke="#000" stroke-width="1.067" d="M31.467 16c0 8.542-6.925 15.467-15.467 15.467S.533 24.542.533 16C.533 7.458 7.458.533 16 .533S31.467 7.458 31.467 16z" 
  style="stroke:var(--color2, rgba(0, 0, 0, 0.1))"/><path d="M22.4 10.782 21.218 9.6l-4.685 4.685L11.848 9.6l-1.182 1.182 4.685 4.685-4.685 4.685 1.182 1.182 4.685-4.685 4.685 4.685 1.182-1.182-4.685-4.685 4.685-4.685z" 
- style="fill:var(--color2, #000)"/></symbol></defs></svg>
+ style=""/></symbol></defs></svg>

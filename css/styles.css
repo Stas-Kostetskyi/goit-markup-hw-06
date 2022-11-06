@@ -18,6 +18,9 @@
   --projects-thumb-overlay: rgba(33, 150, 243, 0.9);
   --applications-background: rgba(47, 48, 58, 0.8);
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-form-input: rgba(117, 117, 117, 0.5);
+  --form-border: rgba(33, 33, 33, 0.2);
+  --transition-duration: 250ms;
 }
 
 body {
@@ -577,6 +580,49 @@ a {
   background-color: transparent;
   fill: var(--icon-color);
 }
+.footer-subscribe {
+  align-items: center;
+}
+.footer-form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 93px;
+}
+.footer-text {
+  display: flex;
+  margin-left: 93px;
+}
+.footer-form-input {
+  display: flex;
+  align-items: center;
+  width: 288px;
+  height: 50px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  background-color: transparent;
+  color: var(--white-text-address);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-order {
+  position: relative;
+  width: 200px;
+  padding: 10px 62px 10px 28px;
+}
+.footer-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 28px;
+  width: 24px;
+  height: 24px;
+  fill: var(--basic-white-text);
+}
 
 /* -hover-focus-active- */
 
@@ -586,7 +632,7 @@ a {
 .mail-tel:focus {
   color: var(--accent-color);
   outline: none;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .nav-link:hover,
@@ -594,7 +640,7 @@ a {
 .footer-mail-tel:hover,
 .mail-tel:hover {
   color: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .order:hover,
@@ -604,7 +650,7 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   outline: none;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
@@ -615,14 +661,14 @@ a {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   outline: none;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
 .projects-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .filters-button:active {
@@ -638,41 +684,37 @@ a {
   background-color: var(--accent-color);
   fill: var(--basic-white-text);
   outline: none;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-/* .customer-icon:focus,
-.customer-icon:hover {
-  fill: var(--accent-color);
-  outline: none;
-} */
+
 .customer-list-link:focus,
 .customer-list-link:hover {
   border: 1px solid var(--accent-color);
   outline: none;
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
 .customer-list-link:hover .customer-icon {
   fill: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .customer-list-link:focus .customer-icon {
   fill: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
 .mail-tel:hover .mail-list-icon {
   fill: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 .mail-tel:focus .mail-list-icon {
   fill: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 /* підкреслення посилання поточної сторінки  */
@@ -684,7 +726,7 @@ a {
   content: "";
   position: absolute;
   left: 0%;
-  bottom: -1%;
+  bottom: -1px;
   width: 100%;
   height: 4px;
   border-radius: 2px;
@@ -750,7 +792,7 @@ a {
 .link-img:focus .projects-overlay,
 .link-img:hover .projects-overlay {
   transform: translateX(0);
-  transition-duration: 250ms;
+  transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
@@ -775,26 +817,167 @@ a {
 .beckdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* visibility: hidden; */
 }
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--transition-timing-function);
-
   width: 528px;
   height: 581px;
+
+  padding: 40px;
 
   background: var(--basic-white-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+
 .close-modal {
   position: absolute;
   top: 8px;
   right: 8px;
 }
-/* S T A S  */
+.close-modal:focus,
+.close-modal:hover {
+  fill: var(--accent-color);
+}
+.form-modal {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+.form-tittle {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--tittle-text-color);
+}
+.form-field {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+}
+.form-wrapper {
+  position: relative;
+  display: block;
+}
+.form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--form-border);
+  outline: transparent;
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: transform 250ms var(--transition-timing-function);
+}
+.comments {
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--form-border);
+  outline: transparent;
+  border-radius: 4px;
+  padding: 12px 16px;
+  resize: none;
+}
+.form-input::placeholder,
+.comments::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--color-form-input);
+}
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+.form-order {
+  width: 200px;
+}
+.form-contract {
+  text-decoration: underline;
+}
+
+.accept {
+  display: block;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-left: 14px;
+}
+.accept-field {
+  position: relative;
+  padding-left: 25px;
+
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
+.checkbox-input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.checkbox-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  z-index: 1;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--tittle-text-color);
+  border-radius: 2px;
+  background-color: var(--basic-white-text);
+
+  transition: opacity 250ms var(--transition-timing-function);
+}
+.checkbox-checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  transform: translateY(-50%);
+  border-radius: 2px;
+
+  background-color: var(--btn-hover);
+  fill: var(--basic-white-text);
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  opacity: 0;
+}
+.accept-field:focus-within .checkbox-icon,
+.form-field:focus-within textarea,
+.form-field:focus-within input {
+  border-color: var(--accent-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.form-field:focus-within svg {
+  fill: var(--accent-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
