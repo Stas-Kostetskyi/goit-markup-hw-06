@@ -522,6 +522,7 @@ a {
 }
 .container.foot {
   display: flex;
+  justify-content: space-between;
 }
 .logo-foot {
   display: inline-block;
@@ -917,6 +918,7 @@ a {
 }
 .form-contract {
   text-decoration: underline;
+  color: var(--accent-color);
 }
 
 .accept {
@@ -934,8 +936,8 @@ a {
 }
 .checkbox-input {
   appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
 }
 .checkbox-icon {
   position: absolute;
