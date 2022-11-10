@@ -94,20 +94,21 @@ a {
 
 .header {
 }
-.head {
+.header_page,
+.header_nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav-list {
+.header_list {
   display: flex;
   margin-left: 93px;
 }
-.nav-list .item + .item {
+.header_list .header_item + .header_item {
   margin-left: 50px;
 }
-.nav-list .nav-link {
+.header_list .header_link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -117,15 +118,15 @@ a {
   align-items: center;
   margin-left: auto;
 }
-.mail-list .item + .item {
+.mail-list .mail-list_item + .mail-list_item {
   margin-left: 30px;
 }
-.logo-head {
+.header_logo {
   display: inline-block;
   padding-top: 24px;
   padding-bottom: 25px;
 }
-.logo {
+.header_logo--left {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -133,7 +134,7 @@ a {
 
   color: var(--accent-color);
 }
-.logo-header {
+.header_logo--right {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -141,16 +142,16 @@ a {
 
   color: var(--logo-second-color);
 }
-.nav .nav-link.current {
+.nav .header_link.current {
   color: var(--accent-color);
 }
-.nav-link,
-.nav-link.current {
+.header_link,
+.header_link.current {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
 }
-.mail-tel {
+.mail-list_link {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -163,7 +164,7 @@ a {
 
   color: var(--primary-text-color);
 }
-.mail-list-icon {
+.mail-list_icon {
   margin-right: 10px;
   fill: var(--icon-color);
 }
@@ -504,7 +505,7 @@ a {
 }
 
 .projects-link,
-.nav-link {
+.header_link {
   color: var(--tittle-text-color);
 }
 
@@ -627,19 +628,19 @@ a {
 
 /* -hover-focus-active- */
 
-.nav-link:focus,
+.header_link:focus,
 .address-mail-tel:focus,
 .footer-mail-tel:focus,
-.mail-tel:focus {
+.mail-list_link:focus {
   color: var(--accent-color);
   outline: none;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.nav-link:hover,
+.header_link:hover,
 .address-mail-tel:hover,
 .footer-mail-tel:hover,
-.mail-tel:hover {
+.mail-list_link:hover {
   color: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -708,22 +709,22 @@ a {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.mail-tel:hover .mail-list-icon {
+.mail-list_link:hover .mail-list_icon {
   fill: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.mail-tel:focus .mail-list-icon {
+.mail-list_link:focus .mail-list_icon {
   fill: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 /* підкреслення посилання поточної сторінки  */
-.nav-link {
+.header_link {
   position: relative;
   display: block;
 }
-.nav-link.current::after {
+.header_link.current::after {
   content: "";
   position: absolute;
   left: 0%;
@@ -810,7 +811,8 @@ a {
 
   opacity: 1;
 
-  transition: opacity 250ms var(--transition-timing-function);
+  transition: opacity 250ms var(--transition-timing-function),
+    visibility 250ms var(--transition-timing-function);
 }
 .beckdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(1.2);
@@ -818,6 +820,7 @@ a {
 .beckdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .modal {
