@@ -287,24 +287,6 @@ a {
 .features--icon-astronaut::before {
   background-image: url(../images/astronaut.svg);
 }
-/* варіант з псевдокласами--end */
-
-/* варіант з інлайн-спрайт svg start */
-/* .features-button {
-  display: flex;
-  gap: 30px;
-}
-.button-list {
-  width: 270px;
-  height: 120px;
-  padding: 0;
-  margin-bottom: 30px;
-  border: none;
-  background-color: var(--secondary-background-color);
-
-  flex-basis: calc((100% - 3 * 30px) / 4);
-} */
-/* варіант з інлайн-спрайт svg end */
 
 /* <!-- Чим ми займаємося --> */
 .work_list {
