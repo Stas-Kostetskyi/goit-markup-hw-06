@@ -126,6 +126,7 @@ a {
   padding-top: 24px;
   padding-bottom: 25px;
 }
+.footer_logo--left,
 .header_logo--left {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -201,7 +202,8 @@ a {
   text-align: center;
   text-transform: uppercase;
 }
-.hero_button {
+.hero_button,
+.order {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -323,7 +325,7 @@ a {
 }
 
 .work h2,
-.section-team h2 {
+.team h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -333,18 +335,18 @@ a {
 }
 
 /* <!-- Наша команда --> */
-.section-team {
+.team {
   padding-top: 94px;
   padding-bottom: 94px;
 
   background-color: var(--secondary-background-color);
 }
-.team {
+.team_list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.team-list {
+.team_item {
   padding-bottom: 30px;
   flex-basis: calc((100% - 3 * 30px) / 4);
   text-align: center;
@@ -360,11 +362,11 @@ a {
   justify-content: space-between;
   margin-top: 16px;
 }
-.section-team h2 {
+.team h2 {
   margin-top: 0;
   margin-bottom: 50px;
 }
-.team-list h3 {
+.team_item h3 {
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -376,11 +378,11 @@ a {
   color: var(--tittle-text-color);
 }
 
-.team-list img {
+.team_item img {
   display: block;
   margin-bottom: 30px;
 }
-.team-list p {
+.team_item p {
   margin-bottom: 16px;
 
   font-weight: 400;
@@ -393,11 +395,11 @@ a {
 }
 
 /* наші клієнти */
-.customer-section {
+.clients {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.customer-tittle {
+.clients_tittle {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -409,11 +411,11 @@ a {
   color: var(--tittle-text-color);
 }
 
-.customer-list {
+.clients_list {
   display: flex;
   justify-content: center;
 }
-.customer-list-link {
+.clients_link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,10 +426,10 @@ a {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
-.customer-list-item:not(:last-child) {
+.clients_item:not(:last-child) {
   margin-right: 30px;
 }
-.customer-icon {
+.clients_icon {
   fill: var(--icon-color);
 }
 
@@ -438,15 +440,15 @@ a {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.filters-list {
+.filters_list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.filters-list .item + .item {
+.filters_list .filters_item + .filters_item {
   margin-left: 8px;
 }
-.filters-button {
+.filters_button {
   display: inline-block;
   border-radius: 4px;
   padding: 6px 22px;
@@ -467,14 +469,14 @@ a {
   gap: 30px;
 }
 
-.projects-link {
+.projects_item {
   flex-basis: calc((100% - 2 * 30px) / 3);
 }
-.link-img img {
+.projects_link img {
   display: block;
 }
 
-.pro-tittle h2 {
+.projects_tittle h2 {
   margin-top: 0;
   margin-bottom: 4px;
   text-align: left;
@@ -486,7 +488,7 @@ a {
 
   color: var(--tittle-text-color);
 }
-.pro-tittle p {
+.projects_tittle p {
   margin-top: 0;
   margin-bottom: 0;
   text-align: left;
@@ -496,7 +498,7 @@ a {
 
   color: var(--primary-text-color);
 }
-.pro-tittle {
+.projects_tittle {
   padding: 20px 24px;
   border: 1px solid var(--border-projects);
   border-top-color: transparent;
@@ -504,7 +506,7 @@ a {
   text-align: left;
 }
 
-.projects-link,
+.projects_item,
 .header_link {
   color: var(--tittle-text-color);
 }
@@ -514,22 +516,22 @@ a {
   padding: 60px 0px;
   background-color: var(--cap-footer-background-color);
 }
-.footer .footer-address {
+.footer .footer_address {
   margin-right: 70px;
 }
-.foot {
+.footer_page {
   text-align: left;
   align-items: baseline;
 }
-.container.foot {
+.container.footer_page {
   display: flex;
   justify-content: space-between;
 }
-.logo-foot {
+.footer_logo {
   display: inline-block;
   margin-bottom: 20px;
 }
-.logo-footer {
+.footer_logo--right {
   color: var(--basic-white-text);
 
   font-family: "Raleway", sans-serif;
@@ -544,13 +546,13 @@ a {
   font-size: 14px;
   line-height: 1.7;
 }
-.footer-list .li:not(:last-child) {
+.footer_list .footer_item:not(:last-child) {
   margin-bottom: 9px;
 }
 .address-mail-tel {
   color: var(--basic-white-text);
 }
-.footer-mail-tel {
+.footer_mail {
   color: var(--white-text-address);
 }
 
@@ -558,8 +560,8 @@ a {
   display: flex;
   justify-content: center;
 }
-
-.networks-text {
+.footer-subscribe_tittle,
+.network_tittle {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -569,10 +571,10 @@ a {
   color: var(--basic-white-text);
   margin-bottom: 20px;
 }
-.network-item:not(:last-child) {
+.network-list_item:not(:last-child) {
   margin-right: 10px;
 }
-.socnetwork-list-link {
+.network-list_link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,11 +593,11 @@ a {
   gap: 12px;
   margin-left: 93px;
 }
-.footer-text {
+.footer-subscribe_tittle {
   display: flex;
   margin-left: 93px;
 }
-.footer-form-input {
+.footer-form_input {
   display: flex;
   align-items: center;
   width: 288px;
@@ -611,12 +613,12 @@ a {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-.footer-order {
+.footer-button {
   position: relative;
   width: 200px;
   padding: 10px 62px 10px 28px;
 }
-.footer-icon {
+.footer-button_icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -630,7 +632,7 @@ a {
 
 .header_link:focus,
 .address-mail-tel:focus,
-.footer-mail-tel:focus,
+.footer_mail:focus,
 .mail-list_link:focus {
   color: var(--accent-color);
   outline: none;
@@ -639,7 +641,7 @@ a {
 }
 .header_link:hover,
 .address-mail-tel:hover,
-.footer-mail-tel:hover,
+.footer_mail:hover,
 .mail-list_link:hover {
   color: var(--accent-color);
   transition-duration: var(--transition-duration);
@@ -656,8 +658,8 @@ a {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.filters-button:hover,
-.filters-button:focus {
+.filters_button:hover,
+.filters_button:focus {
   color: var(--basic-white-text);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -667,22 +669,22 @@ a {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.projects-link:hover {
+.projects_item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.filters-button:active {
+.filters_button:active {
   color: var(--logo-second-color);
 }
 
-.footer-networks .socnetwork-list-link {
+.network .network-list_link {
   fill: var(--basic-white-text);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.socnetwork-list-link:hover,
-.socnetwork-list-link:focus {
+.network-list_link:hover,
+.network-list_link:focus {
   background-color: var(--accent-color);
   fill: var(--basic-white-text);
   outline: none;
@@ -690,20 +692,20 @@ a {
   transition-timing-function: var(--transition-timing-function);
 }
 
-.customer-list-link:focus,
-.customer-list-link:hover {
+.clients_link:focus,
+.clients_link:hover {
   border: 1px solid var(--accent-color);
   outline: none;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
-.customer-list-link:hover .customer-icon {
+.clients_link:hover .clients_icon {
   fill: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
-.customer-list-link:focus .customer-icon {
+.clients_link:focus .clients_icon {
   fill: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -764,11 +766,11 @@ a {
 
 /* оверлей на картках проектів*/
 
-.projects-thumb {
+.projects_thumb {
   position: relative;
   overflow: hidden;
 }
-.projects-overlay {
+.projects_overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -791,8 +793,8 @@ a {
   color: var(--basic-white-text);
   text-align: left;
 }
-.link-img:focus .projects-overlay,
-.link-img:hover .projects-overlay {
+.projects_link:focus .projects_overlay,
+.projects_link:hover .projects_overlay {
   transform: translateX(0);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
@@ -840,13 +842,13 @@ a {
   border-radius: 4px;
 }
 
-.close-modal {
+.modal_close {
   position: absolute;
   top: 8px;
   right: 8px;
 }
-.close-modal:focus,
-.close-modal:hover {
+.modal_close:focus,
+.modal_close:hover {
   fill: var(--accent-color);
 }
 .form-modal {
@@ -856,7 +858,7 @@ a {
   width: 100%;
   height: 100%;
 }
-.form-tittle {
+.form-modal_tittle {
   display: block;
   margin-bottom: 12px;
 
@@ -868,22 +870,22 @@ a {
 
   color: var(--tittle-text-color);
 }
-.form-field {
+.form-modal_field {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
   margin-bottom: 10px;
 }
-.form-label {
+.form-modal_label {
   display: block;
   margin-bottom: 4px;
 }
-.form-wrapper {
+.form-modal_wrapper {
   position: relative;
   display: block;
 }
-.form-input {
+.form-modal_input {
   width: 100%;
   height: 40px;
   border: 1px solid var(--form-border);
@@ -892,7 +894,7 @@ a {
   padding-left: 42px;
   transition: transform 250ms var(--transition-timing-function);
 }
-.comments {
+.form-modal_comments {
   width: 100%;
   height: 120px;
   border: 1px solid var(--form-border);
@@ -901,14 +903,14 @@ a {
   padding: 12px 16px;
   resize: none;
 }
-.form-input::placeholder,
-.comments::placeholder {
+.form-modal_input::placeholder,
+.form-modal_comments::placeholder {
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.01em;
   color: var(--color-form-input);
 }
-.form-icon {
+.form-modal_icon {
   position: absolute;
   top: 50%;
   left: 14px;
@@ -916,33 +918,33 @@ a {
   width: 18px;
   height: 18px;
 }
-.form-order {
+.form-button {
   width: 200px;
 }
-.form-contract {
+.checkbox_contract {
   text-decoration: underline;
   color: var(--accent-color);
 }
 
-.accept {
+.checkbox {
   display: block;
   align-items: center;
   margin-bottom: 30px;
   margin-left: 14px;
 }
-.accept-field {
+.checkbox_field {
   position: relative;
   padding-left: 25px;
 
   line-height: 1.71;
   color: var(--primary-text-color);
 }
-.checkbox-input {
+.checkbox_input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.checkbox-icon {
+.checkbox_checkmark {
   position: absolute;
   left: 0;
   top: 50%;
@@ -958,7 +960,7 @@ a {
 
   transition: opacity 250ms var(--transition-timing-function);
 }
-.checkbox-checkmark {
+.checkbox_icon {
   position: absolute;
   left: 0;
   top: 50%;
@@ -970,18 +972,18 @@ a {
   fill: var(--basic-white-text);
 }
 
-.checkbox-input:checked + .checkbox-icon {
+.checkbox_input:checked + .checkbox_checkmark {
   opacity: 0;
 }
-.accept-field:focus-within .checkbox-icon,
-.form-field:focus-within textarea,
-.form-field:focus-within input {
+.checkbox_field:focus-within .checkbox_checkmark,
+.form-modal_field:focus-within textarea,
+.form-modal_field:focus-within input {
   border-color: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
-.form-field:focus-within svg {
+.form-modal_field:focus-within svg {
   fill: var(--accent-color);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
